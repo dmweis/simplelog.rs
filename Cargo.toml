@@ -20,9 +20,12 @@ include = [
 
 [features]
 test = []
-default = ["termcolor"]
+default = ["termcolor", "mqtt"]
+mqtt = ["rumqtt", "crossbeam-channel"]
 
 [dependencies]
 log = { version = "0.4.*", features = ["std"] }
 termcolor = { version = "1.1.*", optional = true }
 chrono = "0.4.*"
+rumqtt = { version = "0.31.0", optional = true }
+crossbeam-channel = { version = "0.4.2", optional = true }

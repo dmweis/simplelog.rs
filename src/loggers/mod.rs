@@ -3,6 +3,8 @@ pub mod logging;
 mod simplelog;
 #[cfg(feature = "termcolor")]
 mod termlog;
+#[cfg(feature = "mqtt")]
+mod mqttlog;
 #[cfg(feature = "test")]
 mod testlog;
 mod writelog;
@@ -11,6 +13,9 @@ pub use self::comblog::CombinedLogger;
 pub use self::simplelog::SimpleLogger;
 #[cfg(feature = "termcolor")]
 pub use self::termlog::{TermLogError, TermLogger, TerminalMode};
+#[cfg(feature = "mqtt")]
+pub use self::mqttlog::MqttLogger;
 #[cfg(feature = "test")]
 pub use self::testlog::TestLogger;
 pub use self::writelog::WriteLogger;
+

@@ -28,6 +28,8 @@ pub use self::config::{Config, ConfigBuilder, LevelPadding, ThreadPadding, Threa
 #[cfg(feature = "test")]
 pub use self::loggers::TestLogger;
 pub use self::loggers::{CombinedLogger, SimpleLogger, WriteLogger};
+#[cfg(feature = "mqtt")]
+pub use self::loggers::MqttLogger;
 #[cfg(feature = "termcolor")]
 pub use self::loggers::{TermLogError, TermLogger, TerminalMode};
 

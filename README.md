@@ -13,6 +13,7 @@ easy alternative.
 - `SimpleLogger` (very basic logger that logs to stderr/out, should never fail)
 - `TermLogger` (advanced terminal logger, that splits to stderr/out and has color support) (can be excluded on unsupported platforms)
 - `WriteLogger` (logs to a given struct implementing `Write`. e.g. a file)
+- `MqttLogger` (logs everything as mqtt messages to `logging/{application_name}`, Relatively slow)
 - `CombinedLogger` (can be used to form combinations of the above loggers)
 
 ## Usage
